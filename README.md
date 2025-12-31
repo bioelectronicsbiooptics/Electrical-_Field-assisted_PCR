@@ -66,7 +66,7 @@ This project provides a suite of MATLAB scripts designed to analyze and visualiz
 📋 Overview
 The pipeline takes raw FASTQ reads, filters them based on a high-quality Phred score threshold, ensures all sequences are oriented correctly using primer sequences, and finally visualizes the percentage of A, T, C, and G at each nucleotide position.
 
-🛠 Features
+## 🛠 Features
 Data Integration: Merges reads from multiple FASTQ files into a single dataset for analysis.
 
 Quality Control (QC): Filters out low-quality reads by calculating the mean Phred quality score (threshold set to 35).
@@ -77,7 +77,7 @@ Positional Analysis: Calculates the frequency of each nucleotide (A, T, C, G) ac
 
 Visualization: Generates a histogram for read length distribution and a stacked bar chart for base composition.
 
-🚀 Workflow Details
+## 🚀 Workflow Details
 1. Data Loading and Quality Filtering
 The script reads controlled DNA synthesis_1.fastq and controlled DNA synthesis_2.fastq.
 
@@ -103,14 +103,14 @@ It iterates through each position (1 to 90) and counts the occurrences of 'A', '
 
 The counts are converted into percentages for relative distribution analysis.
 
-📊 Outputs
+## 📊 Outputs
 Read Length Histogram: Displays the distribution of sequence lengths after quality filtering.
 
 Stacked Bar Chart: A visual representation of the nucleotide distribution at each position from 1 to 90.
 
 Legend: Blue (A), Orange (T), Yellow (C), Purple (G) — Note: Colors may vary based on MATLAB's default color map.
 
-⚙️ Requirements
+## ⚙️ Requirements
 MATLAB
 
 Bioinformatics Toolbox (required for fastqread)
