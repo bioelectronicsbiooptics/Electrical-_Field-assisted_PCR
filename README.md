@@ -61,7 +61,7 @@ This project provides a suite of MATLAB scripts designed to analyze and visualiz
 * **Forward Primer**: `ATGCACTCAGACGTACAACG`
 * **Reverse Primer**: `CATTACACCTCACGCCTTCG`
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # Figure 5
 📋 Overview
 The pipeline takes raw FASTQ reads, filters them based on a high-quality Phred score threshold, ensures all sequences are oriented correctly using primer sequences, and finally visualizes the percentage of A, T, C, and G at each nucleotide position.
