@@ -1,8 +1,6 @@
 # Electrical-_Field-assisted_PCR
 
 # Figure 4
-# DNA Sequence Analysis for E-PCR Results
-
 This project provides a suite of MATLAB scripts designed to analyze and visualize DNA sequencing data (FASTQ format) obtained from E-PCR (Emulsion PCR). The tools focus on sequence alignment, quality control, and detailed error profiling (insertions, deletions, and substitutions).
 
 ## 📂 File Structure
@@ -62,9 +60,14 @@ This project provides a suite of MATLAB scripts designed to analyze and visualiz
 * **Reverse Primer**: `CATTACACCTCACGCCTTCG`
 
 
+
+
+
 # Figure 5
 📋 Overview
 The pipeline takes raw FASTQ reads, filters them based on a high-quality Phred score threshold, ensures all sequences are oriented correctly using primer sequences, and finally visualizes the percentage of A, T, C, and G at each nucleotide position.
+
+---
 
 ## 🛠 Features
 Data Integration: Merges reads from multiple FASTQ files into a single dataset for analysis.
@@ -76,6 +79,8 @@ Sequence Standardization: Automatically detects and corrects sequence orientatio
 Positional Analysis: Calculates the frequency of each nucleotide (A, T, C, G) across a specific sequence length (e.g., 90 bp).
 
 Visualization: Generates a histogram for read length distribution and a stacked bar chart for base composition.
+
+---
 
 ## 🚀 Workflow Details
 1. Data Loading and Quality Filtering
@@ -103,6 +108,8 @@ It iterates through each position (1 to 90) and counts the occurrences of 'A', '
 
 The counts are converted into percentages for relative distribution analysis.
 
+---
+
 ## 📊 Outputs
 Read Length Histogram: Displays the distribution of sequence lengths after quality filtering.
 
@@ -110,12 +117,16 @@ Stacked Bar Chart: A visual representation of the nucleotide distribution at eac
 
 Legend: Blue (A), Orange (T), Yellow (C), Purple (G) — Note: Colors may vary based on MATLAB's default color map.
 
+---
+
 ## ⚙️ Requirements
 MATLAB
 
 Bioinformatics Toolbox (required for fastqread)
 
 Input FASTQ files: controlled DNA synthesis_1.fastq and controlled DNA synthesis_2.fastq
+
+---
 
 ## ⚠️ Notes
 
