@@ -61,6 +61,62 @@ This project provides a suite of MATLAB scripts designed to analyze and visualiz
 * **Forward Primer**: `ATGCACTCAGACGTACAACG`
 * **Reverse Primer**: `CATTACACCTCACGCCTTCG`
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Figure 5
+📋 Overview
+The pipeline takes raw FASTQ reads, filters them based on a high-quality Phred score threshold, ensures all sequences are oriented correctly using primer sequences, and finally visualizes the percentage of A, T, C, and G at each nucleotide position.
+
+🛠 Features
+Data Integration: Merges reads from multiple FASTQ files into a single dataset for analysis.
+
+Quality Control (QC): Filters out low-quality reads by calculating the mean Phred quality score (threshold set to 35).
+
+Sequence Standardization: Automatically detects and corrects sequence orientation (reverse complement) by matching against known primer sequences.
+
+Positional Analysis: Calculates the frequency of each nucleotide (A, T, C, G) across a specific sequence length (e.g., 90 bp).
+
+Visualization: Generates a histogram for read length distribution and a stacked bar chart for base composition.
+
+🚀 Workflow Details
+1. Data Loading and Quality Filtering
+The script reads controlled DNA synthesis_1.fastq and controlled DNA synthesis_2.fastq.
+
+It calculates the Phred quality score by subtracting 33 from the ASCII quality characters.
+
+Reads with a mean quality score of less than 35 are discarded.
+
+2. Orientation Correction
+Defined primers:
+
+F_primers: CGACACTGGCTACCAGTACG
+
+R_primers: GTACACCTCACGCCTTCACC
+
+The script checks if the first 20 base pairs of a read match the reverse complement of the primer (allowing up to 2 mismatches).
+
+If a match is found, the entire sequence is converted to its reverse complement to ensure uniform directionality.
+
+3. Base Composition Analysis
+The script isolates reads with a specific length of 90 bp.
+
+It iterates through each position (1 to 90) and counts the occurrences of 'A', 'T', 'C', and 'G'.
+
+The counts are converted into percentages for relative distribution analysis.
+
+📊 Outputs
+Read Length Histogram: Displays the distribution of sequence lengths after quality filtering.
+
+Stacked Bar Chart: A visual representation of the nucleotide distribution at each position from 1 to 90.
+
+Legend: Blue (A), Orange (T), Yellow (C), Purple (G) — Note: Colors may vary based on MATLAB's default color map.
+
+⚙️ Requirements
+MATLAB
+
+Bioinformatics Toolbox (required for fastqread)
+
+Input FASTQ files: controlled DNA synthesis_1.fastq and controlled DNA synthesis_2.fastq
+
 ## ⚠️ Notes
 
 * The script `Fig_4C_ii_matlabcode.m` requires external helper functions (e.g., `evertComplementary`, `PrimerSorting`) to be available in the MATLAB path.
