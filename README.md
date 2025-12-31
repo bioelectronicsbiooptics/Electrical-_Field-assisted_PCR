@@ -1,4 +1,4 @@
-# Electrical-_Field-assisted_PCR
+# Electrical_Field-assisted_PCR
 
 # Figure 4
 This project provides a suite of MATLAB scripts designed to analyze and visualize DNA sequencing data (FASTQ format) obtained from E-PCR (Emulsion PCR). The tools focus on sequence alignment, quality control, and detailed error profiling (insertions, deletions, and substitutions).
