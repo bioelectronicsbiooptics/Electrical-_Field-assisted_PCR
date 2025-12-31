@@ -50,8 +50,8 @@ This project provides a suite of MATLAB scripts designed to analyze and visualiz
 ### Standard Workflow
 
 1. **Initial Overview**: Run `Fig_4C_i_and_4D_matlabcode.m` to view the length histogram and base distribution.
-2. **Quality Statistics**: Run `Fig_4C_ii_matlabcode.m`. Enter the target DNA length (e.g., `100`) when prompted to generate Q-score CSV files.
-3. **Error Analysis**: Run `Fig_4E_matlabcode.m` to calculate specific mutation rates (InDels and Substitutions).
+2. **Quality Statistics**: Run `Fig_4C_ii_matlabcode.m`. Enter the target DNA length (`100`) when prompted to generate Q-score CSV files.
+4. **Error Analysis**: Run `Fig_4E_matlabcode.m` to calculate specific mutation rates (InDels and Substitutions).
 
 ---
 
@@ -59,7 +59,7 @@ This project provides a suite of MATLAB scripts designed to analyze and visualiz
 
 * **Target Length**: 100 bp
 * **Forward Primer**: `ATGCACTCAGACGTACAACG`
-* **Reverse Primer**: `CGAAGGCGTGAGGTGTAATG` or `CATTACACCTCACGCCTTCG`
+* **Reverse Primer**: `CATTACACCTCACGCCTTCG`
 
 ## ⚠️ Notes
 
